@@ -80,13 +80,14 @@ return {
         --   end,
         -- },
         omnisharp = {
+          -- enable_import_completion = true,
           -- cmd = { "omnisharp-mono", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) },
           handlers = {
             ["textDocument/definition"] = require("omnisharp_extended").handler,
           },
-          root_dir = function()
-            return vim.loop.cwd()
-          end,
+          -- root_dir = function()
+          --   return vim.loop.cwd()
+          -- end,
           on_attach = function(client, bufnr)
             client.server_capabilities.semanticTokensProvider = {
               full = vim.empty_dict(),
