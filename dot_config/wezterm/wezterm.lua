@@ -1,5 +1,6 @@
 local wezterm = require("wezterm")
 return {
+	macos_window_background_blur = 20,
 	color_scheme = "Catppuccin Mocha", -- or Macchiato, Frappe, Latte
 	exit_behavior = "Close",
 	font = wezterm.font("FiraCode Nerd Font"),
